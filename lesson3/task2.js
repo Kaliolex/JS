@@ -1,6 +1,3 @@
-let age = 0
-let isAdult = false
-
 function randomAge(min, max) {
 
     let genAge = 0
@@ -8,8 +5,14 @@ function randomAge(min, max) {
     return genAge
 }
 
-age = randomAge(10, 30)
+module.exports = {randomAge}
 
-isAdult = age >= 18 ? true : false
-
-console.log(age, isAdult)
+if(require.main === module) { 
+    let age = 0
+    let isAdult = false
+    age = randomAge(10, 30)
+    
+    isAdult = age >= 18 ? true : false
+    
+    console.log(age, isAdult)
+}
