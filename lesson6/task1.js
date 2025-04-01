@@ -1,5 +1,5 @@
 function handleNum(num, handleEvenCb, handleOddCb) {
-    let isOdd = num % 2 === 0 ? true : false
+    let isOdd = num % 2 === 0
     if (isOdd == true) {
         handleOddCb(num)
     } else {
